@@ -49,7 +49,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-export const TailorOnboardingStep1Screen = (_props: Props) => {
+export const TailorOnboardingStep1Screen = ({ navigation }: Props) => {
   const { draft, update } = useOnboarding();
 
   const {
@@ -83,7 +83,7 @@ export const TailorOnboardingStep1Screen = (_props: Props) => {
   }, [fullName, shopName, locality, experience]);
 
   const onSubmit = (_values: FormValues) => {
-    // TODO: navigate to Step 2 once it's built
+    navigation.navigate('TailorOnboardingStep2');
   };
 
   return (
