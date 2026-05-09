@@ -29,6 +29,20 @@ export type PortfolioPhoto = {
   height?: number;
 };
 
+export type IdType = 'aadhaar' | 'voter';
+
+export type IdImage = {
+  uri: string;
+  width?: number;
+  height?: number;
+};
+
+export type IdVerification = {
+  idType: IdType | null;
+  front: IdImage | null;
+  back: IdImage | null;
+};
+
 export type OnboardingDraft = {
   fullName: string;
   shopName: string;
@@ -36,6 +50,7 @@ export type OnboardingDraft = {
   experience: ExperienceBucket | null;
   skills: SkillPricing[];
   portfolio: PortfolioPhoto[];
+  idVerification: IdVerification;
 };
 
 const initialDraft: OnboardingDraft = {
@@ -45,6 +60,7 @@ const initialDraft: OnboardingDraft = {
   experience: null,
   skills: [],
   portfolio: [],
+  idVerification: { idType: null, front: null, back: null },
 };
 
 type OnboardingContextValue = {

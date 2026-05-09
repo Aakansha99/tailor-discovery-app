@@ -6,6 +6,8 @@ import { WelcomeScreen } from '../screens/WelcomeScreen';
 import { TailorOnboardingStep1Screen } from '../screens/TailorOnboardingStep1Screen';
 import { TailorOnboardingStep2Screen } from '../screens/TailorOnboardingStep2Screen';
 import { TailorOnboardingStep3Screen } from '../screens/TailorOnboardingStep3Screen';
+import { TailorOnboardingStep4Screen } from '../screens/TailorOnboardingStep4Screen';
+import { OnboardingSubmittedScreen } from '../screens/OnboardingSubmittedScreen';
 import type { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -37,6 +39,16 @@ export const RootNavigator = () => (
         name="TailorOnboardingStep3"
         component={TailorOnboardingStep3Screen}
         options={{ title: 'Portfolio' }}
+      />
+      <Stack.Screen
+        name="TailorOnboardingStep4"
+        component={TailorOnboardingStep4Screen}
+        options={{ title: 'Verify identity' }}
+      />
+      <Stack.Screen
+        name="OnboardingSubmitted"
+        component={OnboardingSubmittedScreen}
+        options={{ headerShown: false, gestureEnabled: false }}
       />
     </Stack.Navigator>
   </NavigationContainer>

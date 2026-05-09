@@ -32,7 +32,7 @@ const COLUMNS = 3;
 const SCREEN_PADDING = 24;
 const TILE_GAP = 8;
 
-export const TailorOnboardingStep3Screen = (_props: Props) => {
+export const TailorOnboardingStep3Screen = ({ navigation }: Props) => {
   const { draft, update } = useOnboarding();
   const [pickerOpen, setPickerOpen] = useState(false);
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
@@ -104,7 +104,7 @@ export const TailorOnboardingStep3Screen = (_props: Props) => {
     if (!canContinue) {
       return;
     }
-    // TODO: navigate to Step 4 once it's built
+    navigation.navigate('TailorOnboardingStep4');
   };
 
   return (
