@@ -24,7 +24,7 @@ export const RootNavigator = () => (
       <Stack.Screen
         name="TailorOnboardingStep1"
         component={TailorOnboardingStep1Screen}
-        options={{ title: 'Set up your profile' }}
+        options={{ title: 'Become a tailor' }}
       />
     </Stack.Navigator>
   </NavigationContainer>
