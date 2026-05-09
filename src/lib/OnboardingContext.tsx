@@ -22,12 +22,20 @@ export type SkillPricing = {
   isSaved: boolean;
 };
 
+export type PortfolioPhoto = {
+  id: string;
+  uri: string;
+  width?: number;
+  height?: number;
+};
+
 export type OnboardingDraft = {
   fullName: string;
   shopName: string;
   locality: string;
   experience: ExperienceBucket | null;
   skills: SkillPricing[];
+  portfolio: PortfolioPhoto[];
 };
 
 const initialDraft: OnboardingDraft = {
@@ -36,6 +44,7 @@ const initialDraft: OnboardingDraft = {
   locality: '',
   experience: null,
   skills: [],
+  portfolio: [],
 };
 
 type OnboardingContextValue = {
