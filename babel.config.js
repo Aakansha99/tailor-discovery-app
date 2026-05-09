@@ -3,5 +3,8 @@ module.exports = {
     ['module:@react-native/babel-preset'],
     'nativewind/babel',
   ],
-  plugins: ['react-native-worklets/plugin'],
+  plugins: [
+    '@babel/plugin-transform-export-namespace-from',
+    'react-native-worklets/plugin',
+  ],
 };
