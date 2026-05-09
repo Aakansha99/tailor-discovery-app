@@ -71,7 +71,7 @@ const validateSkill = (s: SkillPricing): SkillRowError => {
   return errors;
 };
 
-export const TailorOnboardingStep2Screen = (_props: Props) => {
+export const TailorOnboardingStep2Screen = ({ navigation }: Props) => {
   const { draft, update } = useOnboarding();
 
   const skills = draft.skills;
@@ -104,7 +104,7 @@ export const TailorOnboardingStep2Screen = (_props: Props) => {
     if (!allSaved) {
       return;
     }
-    // TODO: navigate to Step 3 once it's built
+    navigation.navigate('TailorOnboardingStep3');
   };
 
   return (

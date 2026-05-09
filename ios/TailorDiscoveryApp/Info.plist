@@ -34,6 +34,10 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Tailor Discovery needs the camera so you can take photos of your work for your portfolio.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Tailor Discovery needs photo library access so you can pick portfolio photos of your work.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>

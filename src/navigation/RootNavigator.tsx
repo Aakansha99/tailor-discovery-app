@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { WelcomeScreen } from '../screens/WelcomeScreen';
 import { TailorOnboardingStep1Screen } from '../screens/TailorOnboardingStep1Screen';
 import { TailorOnboardingStep2Screen } from '../screens/TailorOnboardingStep2Screen';
+import { TailorOnboardingStep3Screen } from '../screens/TailorOnboardingStep3Screen';
 import type { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -31,6 +32,11 @@ export const RootNavigator = () => (
         name="TailorOnboardingStep2"
         component={TailorOnboardingStep2Screen}
         options={{ title: 'Skills & pricing' }}
+      />
+      <Stack.Screen
+        name="TailorOnboardingStep3"
+        component={TailorOnboardingStep3Screen}
+        options={{ title: 'Portfolio' }}
       />
     </Stack.Navigator>
   </NavigationContainer>
