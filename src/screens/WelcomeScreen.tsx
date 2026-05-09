@@ -152,15 +152,15 @@ const RoleCard = ({
 
       <View className="mt-5 items-center">
         {comingSoon ? (
-          <View className="rounded-full bg-brand-mid px-3 py-1.5">
-            <Text className="text-[10px] font-bold uppercase tracking-wide text-brand-dark">
+          <View className="flex-row items-center justify-center rounded-full bg-brand-mid px-5 py-2.5">
+            <Text className="text-sm font-bold text-brand-dark">
               Coming soon
             </Text>
           </View>
         ) : (
           <View
             style={styles.ctaButton}
-            className="flex-row items-center gap-2 rounded-full bg-brand px-5 py-2.5">
+            className="flex-row items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5">
             <Text className="text-sm font-bold text-white">Continue</Text>
             <Text className="text-base font-bold text-white">→</Text>
           </View>
